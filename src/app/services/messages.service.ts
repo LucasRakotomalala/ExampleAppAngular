@@ -10,10 +10,11 @@ export class MessagesService {
 
   public messages$: Observable<Message[]>;
 
-  private url = 'https://my-json-server.typicode.com/LucasRakotomalala/ExampleAppAngular/db';
+  private url = 'https://my-json-server.typicode.com/LucasRakotomalala/ExampleAppAngular/';
+  private messagesUrl = this.url + 'messages';
 
   constructor(private http: HttpClient) {
-    this.messages$ = this.http.get<Message[]>(this.url);
+    this.messages$ = this.http.get<Message[]>(this.messagesUrl);
   }
 
   getMessages(): Observable<Message[]> {

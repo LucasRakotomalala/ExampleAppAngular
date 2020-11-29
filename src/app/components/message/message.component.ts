@@ -17,6 +17,6 @@ export class MessageComponent implements OnInit {
   }
 
   formatDate(date: string): string {
-    return new Date(date).getHours() + ':' + String(new Date(date).getMinutes()).padStart(2, "0");
+    return new Date(date).getHours() + ':' + String(new Date(date).getMinutes()).padStart(2, '0');
   }
 }
