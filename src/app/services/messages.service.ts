@@ -8,10 +8,10 @@ import {HttpClient} from '@angular/common/http';
 })
 export class MessagesService {
 
-  public messages$: Observable<Message[]>;
+  url = 'https://my-json-server.typicode.com/LucasRakotomalala/ExampleAppAngular/';
+  messagesUrl = this.url + 'messages';
 
-  private url = 'https://my-json-server.typicode.com/LucasRakotomalala/ExampleAppAngular/';
-  private messagesUrl = this.url + 'messages';
+  messages$: Observable<Message[]>;
 
   constructor(private http: HttpClient) {
     this.messages$ = this.http.get<Message[]>(this.messagesUrl);
